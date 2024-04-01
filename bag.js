@@ -115,106 +115,11 @@ function generatehtml(products) {
       
 `;
 
-// Close the cart section
-// cartItemsHTML += `</div>`;
 return cartItemsHTML;
 }
 function generatehtml2(){
   
 }
-let a= function generatehtml(products) {
-
-  // let subtotal=0;
-  // let tax=0;
-  // let finaltotal=0;
- 
-
-  let cartItemsHTML = `<div class="cart">
-      <div class="myorder">
-          <div class="takeout">
-              <h3 class="order">My Order</h3>
-              <h5 class="tout">Take Out</h5>
-          </div>
-          <button class="cancel" onClick="toggleCartVisibility()">X</button>
-      </div>
-      <div class="item-add-remove">`;
-
-  // Generate HTML for each product's cart image details
-  cartItemsHTML += `
-      <ul class="cart-itemss">
-          <li>
-              <div class="cart-image-details">
-                  <div class="cart-image">
-                      <img src="${products.image}" alt="" />
-                  </div>
-                  <div class="carmore">
-                      <div class="carttitle">
-                          <h3>${products.title}</h3>
-                          <svg
-                              class="choco"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="w-6 h-6"
-                          >
-                              <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                              />
-                          </svg>
-                      </div>
-                      <div class="cartpriceviw">
-                          <strong>$${products.price}</strong>
-                          <div class="quantity">
-                              <button class="remove">-</button>
-                              <h6 class="count">5</h6>
-                              <button class="add">+</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </li>
-      </ul>
-  `;
-
-  // Close the cart section
-  cartItemsHTML += `</div>`;
-
-  // Generate HTML for subtotal, tax, and total section
-  const totalPriceHTML = `
-      <div class="priceview">
-          <table>
-              <tbody>
-                  <tr>
-                      <td class="first-cell">Subtotal</td>
-                      <td class="last-cell">$/{subtotal}</td>
-                  </tr>
-                  <tr>
-                      <td class="first-cell">Tax (10%)</td>
-                      <td class="last-cell">$/{tax}</td>
-                  </tr>
-                  <tr>
-                      <td colspan="2">
-                          <div class="dash-line"></div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td class="first-cell">Total</td>
-                      <td class="last-cell">$/{finaltotal}</td>
-                  </tr>
-              </tbody>
-          </table>
-          <button class="printbills">Print Bills</button>
-      </div>
-  `;
-
-  // Combine the cart items HTML and the total price HTML
-  return cartItemsHTML + totalPriceHTML;
-}
-
 function toggleCartVisibility() {
     const cartItems = document.querySelector(".cart");
     cartItems.style.display = 'none';
